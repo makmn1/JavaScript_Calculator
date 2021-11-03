@@ -15,3 +15,7 @@ I still need to add the actual calculation process. I plan to convert the expres
 Another goal of mine is to add error handling to return an error to the user if something went wrong, and an option to report the error by sending an email.
 
 To see the parsed expression, check the Console log in the developer tools section of your browser. I plan to send this information to the user on the webpage soon.
+
+A link to a working web page of this repository can be found here: https://makmn1.github.io/JavaScript_Calculator/
+
+Note to self: Parse all operators right after open parenthesis except for plus and minus. Parse all operators right before close parenthesis. 
