@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <p>
+                <h1>This calculator is under construction. Right now, it can check if you have a valid expression (without fixing parenthesis). Try it!</h1>
+                <h1>Hi there! This calculator is designed to handle the following types of expressions: <br></h1>
+                <h2>Addition, Subtraction, Multiplication, Division, Exponentiation.</h2>
+                <h2>To get an accurate answer, please use parenthesis when necessary.</h2>
+                <h3>How to Use the calculator</h3>
+                Type in your expresion, then press calculate.
+
+            </p>
+            <form>
+                <input id = "expression", placeholder="Type Your Expression Here", type = "text", required>
+                <!-- <button type = "button", onclick="console.log(document.getElementById('expression').value)">Calculate</button> -->
+                <button onclick="calculate(document.getElementById('expression').value)", type = "button", required>Calculate</button>
+            </form>
+            <script src = ./index.js></script>
+        </body>
+    </head>
+</html>
+<!--   -->
