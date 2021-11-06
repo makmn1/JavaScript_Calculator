@@ -2,7 +2,10 @@
 const calculate = (pfxArr) => {
     var pfx = 0
     var exponent = 0
+    var base = 0
     while ( pfx < pfxArr.length ) {
+        console.log("Postfix Calculation")
+        console.log(pfxArr)
         if ( !isNaN(pfxArr[pfx]) ) {
             pfx++
             continue
@@ -23,14 +26,16 @@ const calculate = (pfxArr) => {
             pfxArr[pfx] = pfxArr[pfx - 2] / pfxArr[pfx - 1]
         }
         else if ( pfxArr[pfx] === '^' ) {
-            pfxArr[pfx] = pfxArr[pfx - 2]
+            base = pfxArr[pfx - 2]
             exponent = pfxArr[pfx - 1]
-            if ( exponent === '0' )
-            pfxArr[pfx] = 1       
             while ( exponent > 1 ) {
-                pfxArr[pfx] *= pfxArr[pfx]
+                pfxArr[pfx - 2] *= base                
                 exponent--
             }
+            if ( exponent === '0' )
+                pfxArr[pfx] = 1
+            else
+                pfxArr[pfx] = pfxArr[pfx - 2]       
         }
         pfxArr.splice(pfx - 2, 2)
         pfx -= 1

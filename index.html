@@ -25,7 +25,7 @@
                 <form>
                     <input oninput = "liveExpression(document.getElementById('expression').value)", id = "expression", placeholder="Type Your Expression Here", type = "text", required>
                     <!-- <button type = "button", onclick="console.log(document.getElementById('expression').value)">Calculate</button> -->
-                    <button onclick="solutionFinder(document.getElementById('expression').value)", type = "button", required>Calculate</button>
+                    <button onclick="solutionFinder(liveExpression(document.getElementById('expression').value))", type = "button", required>Calculate</button>
                 </form>
                 <p id = "expressionStatus">
                     Your expression will show up here as you type it!

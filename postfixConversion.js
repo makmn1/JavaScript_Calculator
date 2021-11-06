@@ -6,6 +6,9 @@ const toPostfix = (expression) => {
     var insideParen
 
     while ( pfx < expression.length ) {
+        console.log("Postfix Conversion")
+        console.log(pfxArr)
+        console.log(pfxStack)
         if ( !isNaN(expression[pfx]) ) {
             pfxArr.push(expression[pfx])
         }  
@@ -47,6 +50,9 @@ const toPostfix = (expression) => {
             while (pfxStack.length !== 0) {
                 pfxArr.push(pfxStack.pop())
             }
+            console.log("Final Postfix")
+            console.log(pfxArr)
+            console.log(pfxStack)
         }
     }
     return(pfxArr)
