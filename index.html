@@ -2,21 +2,41 @@
 <html>
     <head>
         <body>
-            <p>
-                <h1>This calculator is under construction. Right now, it can check if you have a valid expression (without fixing parenthesis). Try it!</h1>
-                <h1>Hi there! This calculator is designed to handle the following types of expressions: <br></h1>
-                <h2>Addition, Subtraction, Multiplication, Division, Exponentiation.</h2>
-                <h2>To get an accurate answer, please use parenthesis when necessary.</h2>
-                <h3>How to Use the calculator</h3>
-                Type in your expresion, then press calculate.
+            <script src = "./index.js"></script>
+            <script src = "parseInvalidChars.js"></script>
+            <script src = "parseInvalidOperators.js"></script>
+            <script src = "parenthesesChecker.js"></script>
+            <script src = "specifyNegNum.js"></script>
+            <script src = "multiplicationParen.js"></script>
+            <script src = "postfixConversion.js"></script>
+            <script src = "postfixCalculation.js"></script>
+            <div id = "div1">
+                <p id = "p1">
+                    <h1>Hi there! This calculator is designed to handle the following types of expressions: <br></h1>
+                    <h2>Addition (+), Subtraction (-), Multiplication (*), Division (/), Exponentiation (^).</h2>
+                    <h2>To get an accurate answer, please use parenthesis when necessary.</h2>
+                    <h3>How to Use the calculator</h3>
+                    <p>Type in your expresion, then press calculate. This calculator is pretty smart and will automagically correct your
+                        expression if it is incorrect. <br> This calculator is in its early stages, so you may run into some bugs. <br>
+                        Well, actually, you'll probably run into a lot of bugs. Give it a try!
+                    </p>
 
-            </p>
-            <form>
-                <input id = "expression", placeholder="Type Your Expression Here", type = "text", required>
-                <!-- <button type = "button", onclick="console.log(document.getElementById('expression').value)">Calculate</button> -->
-                <button onclick="calculate(document.getElementById('expression').value)", type = "button", required>Calculate</button>
-            </form>
-            <script src = ./index.js></script>
+                </p>
+                <form>
+                    <input oninput = "liveExpression(document.getElementById('expression').value)", id = "expression", placeholder="Type Your Expression Here", type = "text", required>
+                    <!-- <button type = "button", onclick="console.log(document.getElementById('expression').value)">Calculate</button> -->
+                    <button onclick="solutionFinder(document.getElementById('expression').value)", type = "button", required>Calculate</button>
+                </form>
+                <p id = "expressionStatus">
+                    Your expression will show up here as you type it!
+                </p>
+                <p id ="solution">
+                    Your solution will show up here when you click calculate!
+                </p>
+            </div>
+
+            </div>
+
         </body>
     </head>
 </html>
