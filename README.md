@@ -1,21 +1,20 @@
 # JavaScript_Calculator
-An HTML page taking in a mathematical expression given by the user, and then using JavaScript to calculate the result of that expression.
+An HTML page taking in a mathematical expression given by the user, and then using JavaScript, calculates the result of that expression.
 
-## Not Finished!
-This calculator currently parses the expression given by the user to calculate to a legitimate mathematical expression.
+## Supports Live Typing
+As the user types their expression, the calculator converts it to a valid mathematical expression.
+There is still work to be done on how it converts negatives with parentheticals.
 
-For example:
-- If the user puts in consecutive operators, only one of them is kept. 
-- If the user adds too many or incomplete parentheticals, they are removed.
+## Calculate multiple times
+Every time the calculate button is pressed, an answer is generated. Answers are usually accurate or close.
+Again, negatives and parentheses can make these calculations less accurate due to imperfect order of operations. This will be fixed in a later update.
 
-As more cases where the user can create an error are recognized, they will be added to the parsing process.
+## Supports 5 Operations
+For addition, use the plus symbol: +
+For subtraction, use the subtraction symbol: -
+For multiplication, use the asterisk symbol: *
+For division, use the foward slash symbol: /
+For exponentiation, use the caret symbol: ^
 
-I still need to add the actual calculation process. I plan to convert the expression (once parsed) into postfix. Then I plan to use a stack to perform the calculations.
-
-Another goal of mine is to add error handling to return an error to the user if something went wrong, and an option to report the error by sending an email.
-
-To see the parsed expression, check the Console log in the developer tools section of your browser. I plan to send this information to the user on the webpage soon.
-
-A link to a working web page of this repository can be found here: https://makmn1.github.io/JavaScript_Calculator/
-
-Note to self: Parse all operators right after open parenthesis except for plus and minus. Parse all operators right before close parenthesis. 
+## Live Testing Ground
+A link to a working web page of this repository where you can test this calculator can be found here: https://makmn1.github.io/JavaScript_Calculator/
