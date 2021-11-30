@@ -1,4 +1,4 @@
-# JavaScript_Calculator V1.1
+# JavaScript_Calculator v1.1
 An HTML page taking in a mathematical expression given by the user, and then using JavaScript, calculates the result of that expression.  
 The program does this by checking and parsing the expression into a valid mathematical expression.  
 Then, this parsed expression is sent to a function that converts it into [postfix notation](https://web.stonehill.edu/compsci/CS104/Stuff/Infix%20and%20%20postfix%20expressions.pdf), which is then processed by another function to calculate the answer.
