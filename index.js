@@ -23,6 +23,7 @@ const liveExpression = (expression) => {
     expression = add1ToNeg(expression, validValues)
     expression = specifyMultipliers(expression, validValues)
 
+    // move this to a function. The below 2 lines combine '-' and '1' if they exist in the beginning of the expression. 
     if ( expression[0] === '-' && validValues.includes(expression[1]) )
         expression.splice(0, 2, '-1')
 
