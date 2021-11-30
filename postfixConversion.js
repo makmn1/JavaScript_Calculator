@@ -17,18 +17,18 @@ const toPostfix = (expression) => {
         }
         else if ( expression[pfx] === '^' && pfxStack[pfxStack.length - 1] === '^' ) {
             pfxArr.push(pfxStack.pop())
-            pfxStack.push(expression[pfx])
+            continue // we continue because the next element could also be a ^. We can't push a ^ if there is another on top.
         }
         else if ( (expression[pfx] === '*' || expression[pfx] === '/') && (pfxStack[pfxStack.length - 1] === '^' || pfxStack[pfxStack.length - 1] === '*' || pfxStack[pfxStack.length - 1] === '/') ) {
             pfxArr.push(pfxStack.pop())
-            pfxStack.push(expression[pfx])
+            continue // we continue because the next element could also be a ^, *, or /. We can't push a * or / if there is another equal priority character on top.
         }
         else if ( (expression[pfx] === '*' || expression[pfx] === '/') && (pfxStack[pfxStack.length - 1] === '+' || pfxStack[pfxStack.length - 1] === '-' || pfxStack[pfxStack.length - 1] === '(' || pfxStack.length === 0) ) {
             pfxStack.push(expression[pfx])
         }
         else if ( (expression[pfx] === '+' || expression[pfx] === '-') && (pfxStack[pfxStack.length - 1] !== '(' && pfxStack.length !== 0) ) {
             pfxArr.push(pfxStack.pop())
-            pfxStack.push(expression[pfx])
+            continue // we continue because the next element could also not be a '('. We can't push a '+' or '-' if there is another value that is not '('.
         }
         else if ( (expression[pfx] === '+' || expression[pfx] === '-') && (pfxStack[pfxStack.length - 1] === '(' || pfxStack.length === 0) ) {
             pfxStack.push(expression[pfx])

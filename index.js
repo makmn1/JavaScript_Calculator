@@ -18,10 +18,13 @@ const liveExpression = (expression) => {
     }
     
     expression = separateAndParse(expression)
-    expression = parseInvalidOperators(expression, validOperators)
     expression = parenParser(expression)
-    expression = add1ToNeg(expression)
-    expression = specifyMultipliers(expression)
+    expression = parseInvalidOperators(expression, validOperators)
+    expression = add1ToNeg(expression, validValues)
+    expression = specifyMultipliers(expression, validValues)
+
+    if ( expression[0] === '-' && validValues.includes(expression[1]) )
+        expression.splice(0, 2, '-1')
 
     console.log(expression)
     var stringExpression = ''

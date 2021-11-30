@@ -6,6 +6,7 @@ const calculate = (pfxArr) => {
     while ( pfx < pfxArr.length ) {
         console.log("Postfix Calculation")
         console.log(pfxArr)
+        console.log(pfx)
         if ( !isNaN(pfxArr[pfx]) ) {
             pfx++
             continue

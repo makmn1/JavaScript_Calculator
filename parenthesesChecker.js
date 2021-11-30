@@ -22,13 +22,21 @@ const parenParser = (expression) => {
         }
     }
     if ( parenStack.length !== 0 ) {
-        let parensOpened = parenStack.length
-        while ( parensOpened > 0 ) {
+        let unclosedParens = parenStack.length
+        while ( unclosedParens > 0 ) {
             expression.push(')')
-            parensOpened--
+            unclosedParens--
         }
     }
-    
+    i = 0
+    while ( i < expression.length ) {
+        if ( expression[i] === '(' && expression[i + 1] === ')' ) {
+            expression.splice(i + 1, 0, '1')
+            i += 2
+        }
+        else
+            i++
+    }
     return(expression)
 }
 
