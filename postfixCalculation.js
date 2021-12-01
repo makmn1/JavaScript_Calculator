@@ -1,5 +1,5 @@
 // This function caluclates a postfix expression and returns the solution
-const calculate = (pfxArr) => {
+const postfixCalculation = (pfxArr) => {
     var pfx = 0
     var exponent = 0
     var base = 0

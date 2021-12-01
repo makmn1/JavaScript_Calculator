@@ -1,4 +1,4 @@
-const parenParser = (expression) => {
+const parenthesesChecker = (expression) => {
     var i = 0
     const parenStack = []
     var violators = []

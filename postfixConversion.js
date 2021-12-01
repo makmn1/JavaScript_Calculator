@@ -1,5 +1,5 @@
 // This function returns the postfix version of a mathematical expression given an expression
-const toPostfix = (expression) => {
+const postfixConversion = (expression) => {
     const pfxStack = []
     const pfxArr = []
     var pfx = 0

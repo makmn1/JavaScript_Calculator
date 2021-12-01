@@ -1,4 +1,4 @@
-const add1ToNeg = (expression, validValues) => {
+const specifyNegNum = (expression) => {
     var element = 1
     var prevNegMultiplier = false
     while ( element < expression.length ) {

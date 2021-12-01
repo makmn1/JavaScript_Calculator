@@ -12,20 +12,20 @@ const liveExpression = (expression) => {
         includesNumbers = false
 
     while ( i < expression.length ) {
-        if ( validValues.includes(expression[i]) )
+        if ( !isNaN(expression[i]) )
             includesNumbers = true
         i++
     }
     
-    expression = separateAndParse(expression)
-    expression = parenParser(expression)
+    expression = parseInvalidChars(expression)
+    expression = parenthesesChecker(expression)
     expression = parseInvalidOperators(expression, validOperators)
-    expression = add1ToNeg(expression, validValues)
-    expression = specifyMultipliers(expression, validValues)
+    expression = specifyNegNum(expression)
+    expression = specifyMultipliers(expression)
 
     // move this to a function. The below 2 lines combine '-' and '1' if they exist in the beginning of the expression. 
     if ( expression[0] === '-' && validValues.includes(expression[1]) )
-        expression.splice(0, 2, '-1')
+        expression.splice(0, 2, ('-'+expression[1]))
 
     console.log(expression)
     var stringExpression = ''
@@ -46,8 +46,8 @@ const liveExpression = (expression) => {
 }
 
 const solutionFinder = (expression) => {
-    expression = toPostfix(expression)
-    const answer = calculate(expression)
+    expression = postfixConversion(expression)
+    const answer = postfixCalculation(expression)
     const newPara = document.createElement("p")
     newPara.setAttribute("id", "solution")
     const userSolution = document.createTextNode("The answer is: " +answer)
