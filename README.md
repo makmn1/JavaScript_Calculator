@@ -1,4 +1,4 @@
-# JavaScript_Calculator v1.1
+# JavaScript_Calculator v1.2
 An HTML page taking in a mathematical expression given by the user, and then using JavaScript, calculates the result of that expression.  
 The program does this by checking and parsing the expression into a valid mathematical expression.  
 Then, this parsed expression is sent to a function that converts it into [postfix notation](https://web.stonehill.edu/compsci/CS104/Stuff/Infix%20and%20%20postfix%20expressions.pdf), which is then processed by another function to calculate the answer.
@@ -28,8 +28,12 @@ A link to a working web page of this repository where you can test this calculat
 **[Version 1.1] 2021, November 30th** 
 - Added parsing support for multiple negatives.
 
+**[Version 1.2] 2021, November 30th**
+- Bug fixes.
+- Change file names to match function names. 
+
 ## FIXED BUGS
-[Version 1.1]
+**[Version 1.1]**
 - Fixed a major bug where false priority was given in postfix conversion. 
 This bug occurred in postfixConversion.js when a current operator in the expression string matched or was a higher priority to the operator on 
 top of the operator stack. In this case, the operator on the stack was popped off, and the current operator pushed on. 
@@ -38,6 +42,11 @@ containing '-' and '\*', and the current operator being '-'. In this case, the p
 '-', '-', which is invalid. The module postfixConversion.js has been updated to only pop and push in separate conditions.
 This would cause the loop to run more times, though it should now arrive at the correct postfix string, leading to the correct 
 answer for the user. 
+
+**[Version 1.2]**
+- Fixed a small bug in specifyMultipliers where before, the valid number list was used. This was not sufficient since numbers larger than 
+9 were considered not valid. Instead, the method isNaN() was used to check if an element is a number. This bug led to missing operators 
+which affected calculations involving parentheses. 
 
 
 
