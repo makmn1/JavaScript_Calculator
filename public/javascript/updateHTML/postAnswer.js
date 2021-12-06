@@ -3,6 +3,7 @@ const postAnswer = (answer) => {
 
     const newPara = document.createElement("p")
     newPara.setAttribute("id", "solution")
+    newPara.setAttribute("class", "math")
     const userSolution = document.createTextNode("The answer is: " +answer)
     newPara.appendChild(userSolution)
 

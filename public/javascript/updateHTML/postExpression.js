@@ -7,6 +7,7 @@ const postExpression = (expression) => {
 
     const newPara = document.createElement("p")
     newPara.setAttribute("id", "expressionStatus")
+    newPara.setAttribute("class", "math")
     const newExpression = document.createTextNode("Your expression is: " +stringExpression)
     newPara.appendChild(newExpression)
         

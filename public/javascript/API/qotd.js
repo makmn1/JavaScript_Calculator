@@ -3,7 +3,7 @@ const qotd = () => {
 
     const quoteRequest = new XMLHttpRequest();
 
-    let apiURL = "https://quotes.rest/yaml/theysaidso.quotes.openapi.yaml?v1.1"
+    let apiURL = "https://type.fit/api/quotes"
     
     quoteRequest.addEventListener("load", transferComplete)
     quoteRequest.addEventListener("error", transferFailed)
@@ -23,18 +23,15 @@ const qotd = () => {
     }
     
     quoteRequest.onload = function () {
-        console.log(quoteRequest.response)
-        console.log("Hello")
+        let quotes = JSON.parse(quoteRequest.response)
+        const length = quotes.length
+        const picker = Math.floor((Math.random()*length)+1)
+        const chosenQuote = quotes[picker]
+        quote = chosenQuote.text
+        author = chosenQuote.author
+        postQuote(quote, author)
     }
 
     quoteRequest.send()
-
-    // async function getApi(url) {
-    //     const response = await fetch(url)
-    //     var data = await response.json()
-    //     console.log(data)
-    // }
-
-    // getApi(apiURL)
 
 }

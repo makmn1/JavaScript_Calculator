@@ -2,25 +2,30 @@
 <html>
     <head>
         <link rel="stylesheet" href="stylesheet.css">
+        <script src = "./javascript/index.js"></script>
+        <script src = "./javascript/parser_functions/parseInvalidChars.js"></script>
+        <script src = "./javascript/parser_functions/parseInvalidOperators.js"></script>
+        <script src = "./javascript/parser_functions/parenthesesChecker.js"></script>
+        <script src = "./javascript/specifiers/specifyNegNum.js"></script>
+        <script src = "./javascript/specifiers/specifyMultipliers.js"></script>
+        <script src = "./javascript/calculation_functions/postfixConversion.js"></script>
+        <script src = "./javascript/calculation_functions/postfixCalculation.js"></script>
+        <script src = "./javascript/API/mathJSAPI.js"></script>
+        <script src = "./javascript/updateHTML/postExpression.js"></script>
+        <script src = "./javascript/updateHTML/postAnswer.js"></script>
+        <script src = "./javascript/updateHTML/postQuote.js"></script>
+        <script src = "./javascript/API/qotd.js"></script>
+        <script>
+            qotd()
+        </script>
         <body>
-            <script src = "./javascript/index.js"></script>
-            <script src = "./javascript/parser_functions/parseInvalidChars.js"></script>
-            <script src = "./javascript/parser_functions/parseInvalidOperators.js"></script>
-            <script src = "./javascript/parser_functions/parenthesesChecker.js"></script>
-            <script src = "./javascript/specifiers/specifyNegNum.js"></script>
-            <script src = "./javascript/specifiers/specifyMultipliers.js"></script>
-            <script src = "./javascript/calculation_functions/postfixConversion.js"></script>
-            <script src = "./javascript/calculation_functions/postfixCalculation.js"></script>
-            <script src = "./javascript/API/mathJSAPI.js"></script>
-            <script src = "./javascript/updateHTML/postExpression.js"></script>
-            <script src = "./javascript/updateHTML/postAnswer.js"></script>
-            <script src = "./javascript/API/qotd.js"></script>
             <div id = "div1" class = "instructions">
                 <p id = "p1">
+                    <p class="quote" id = "quote"></p>
                     <h1 class = "center">JavaScript Calculator<br></h1>
                     <h2 class = "center">Addition (+), Subtraction (-), Multiplication (*), Division (/), Exponentiation (^)</h2>
                     <h2 class = "center">To get an accurate answer, please use parenthesis when necessary</h2>
-                    <h3>How to Use the calculator</h3>
+                    <h3>How To Use This Calculator</h3>
                     <p>Type in your expresion, then press calculate. This calculator is pretty smart and will automagically correct your
                         expression if it is incorrect. <br> This calculator is in its early stages, so you may run into some bugs, particularly with parenthesis and negatives. <br>
                     </p>
@@ -28,21 +33,22 @@
                 </p>
                 <form>
                     <input class = "userInput" oninput = "liveExpression(document.getElementById('expression').value)", id = "expression", placeholder="Type Your Expression Here", type = "text", required>
+                    <br>
                     <button onclick="solutionFinder(liveExpression(document.getElementById('expression').value), false)", type = "button", required>Calculate Using makmn1's Calculator</button>                
                     <button onclick="solutionFinder(liveExpression(document.getElementById('expression').value), true)", type = "button", required>Calculate Using MathJS Calculator</button>
 
                 </form>
-                <p id = "expressionStatus">
+                <p id = "expressionStatus" class="math">
                     Your expression will show up here as you type it!   
                 </p>
-                <p id ="solution">
+                <p id ="solution" class="math">
                     Your solution will show up here when you click calculate!
                 </p>
             </div>
 
             <div class = "footer">
                 <p>
-                    This calculator was created by Mohamed Mohamed. Check out the source code here: https://github.com/makmn1/JavaScript_Calculator
+                    This calculator was created by Mohamed Mohamed. <a href="https://github.com/makmn1/JavaScript_Calculator" target="_blank">Click here to check out the source code!</a> 
                 </p>
             </div>
 

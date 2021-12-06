@@ -1,6 +1,7 @@
 body {
     background-color: aquamarine;
     color: beige;
+    font-size: 20px;
 }
 
 .center {
@@ -9,7 +10,7 @@ body {
 }
 
 .userInput {
-    width: 100%;
+    width: 25.25%;
     padding: 12px 20px;
     margin: 20px 0;
     box-sizing: border-box;
@@ -24,4 +25,18 @@ body {
 .footer {
     color:black;
     font-weight: bold;
+}
+
+.quote {
+    font-style: italic;
+    font-family:'Papyrus' fantasy;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.math {
+    font-size: 40px;
+    font-family: Latin Modern Math;
 }
