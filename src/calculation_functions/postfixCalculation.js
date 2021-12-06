@@ -43,7 +43,7 @@ const postfixCalculation = (pfxArr) => {
     }
 
     const solution = pfxArr[0]
-    
+    console.log(solution)
     return(solution)
 }
 
