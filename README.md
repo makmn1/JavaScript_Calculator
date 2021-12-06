@@ -1,4 +1,4 @@
-# JavaScript_Calculator v1.2
+# JavaScript_Calculator v1.25
 An HTML page taking in a mathematical expression given by the user, and then using JavaScript, calculates the result of that expression.  
 The program does this by checking and parsing the expression into a valid mathematical expression.  
 Then, this parsed expression is sent to a function that converts it into [postfix notation](https://web.stonehill.edu/compsci/CS104/Stuff/Infix%20and%20%20postfix%20expressions.pdf), which is then processed by another function to calculate the answer.
@@ -32,6 +32,12 @@ A link to a working web page of this repository where you can test this calculat
 - Bug fixes.
 - Change file names to match function names. 
 
+**[Version 1.3] 2021, December 6th**
+- Lots of bug fixes.
+- Lots of code refactoring.
+- Added API support for calculations (MathJS) and random quotes on page load.
+- Added CSS styling to remove dullness of page.
+
 ## FIXED BUGS
 **[Version 1.1]**
 - Fixed a major bug where false priority was given in postfix conversion. 
@@ -47,6 +53,10 @@ answer for the user.
 - Fixed a small bug in specifyMultipliers where before, the valid number list was used. This was not sufficient since numbers larger than 
 9 were considered not valid. Instead, the method isNaN() was used to check if an element is a number. This bug led to missing operators 
 which affected calculations involving parentheses. 
+
+**[Version 1.3]**
+- Fixed many bugs, but one notable bug fixed was negative numbers. Now negative numbers should be assigned appropiately in all cases.
+- There is a known bug where negatives adjacent to parentheses can cause incorrect parsing. This will be fixed in a future update.
 
 
 
