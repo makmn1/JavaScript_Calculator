@@ -3,7 +3,7 @@ const qotd = () => {
 
     const quoteRequest = new XMLHttpRequest();
 
-    let apiURL = "https://zenquotes.io/api/quotes/"
+    let apiURL = "https://quotes.rest/yaml/theysaidso.quotes.openapi.yaml?v1.1"
     
     quoteRequest.addEventListener("load", transferComplete)
     quoteRequest.addEventListener("error", transferFailed)
