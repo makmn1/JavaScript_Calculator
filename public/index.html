@@ -21,13 +21,12 @@
                     <h3>How to Use the calculator</h3>
                     <p>Type in your expresion, then press calculate. This calculator is pretty smart and will automagically correct your
                         expression if it is incorrect. <br> This calculator is in its early stages, so you may run into some bugs. <br>
-                        Well, actually, you'll probably run into a lot of bugs. Give it a try!
+                        Well, actually, you'll probably run into a lot of bugs. Give it a try! Test
                     </p>
 
                 </p>
                 <form>
                     <input oninput = "liveExpression(document.getElementById('expression').value)", id = "expression", placeholder="Type Your Expression Here", type = "text", required>
-                    <!-- <button type = "button", onclick="console.log(document.getElementById('expression').value)">Calculate</button> -->
                     <button onclick="solutionFinder(liveExpression(document.getElementById('expression').value), false)", type = "button", required>Calculate Using makmn1's Calculator</button>                
                     <button onclick="solutionFinder(liveExpression(document.getElementById('expression').value), true)", type = "button", required>Calculate Using MathJS Calculator</button>
 
