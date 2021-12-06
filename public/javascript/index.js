@@ -36,7 +36,7 @@ const liveExpression = (expression) => {
 
 // Finds a solution of an expression using either the MathJS API or in-house functions. 
 const solutionFinder = (expression, useAPI) => {
-    
+    qotd()
     if ( useAPI ) {
         mathJSAPI(expression)
     } else {
