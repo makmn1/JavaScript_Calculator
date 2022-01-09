@@ -19,7 +19,7 @@ For division, use the foward slash symbol: /
 For exponentiation, use the caret symbol: ^  
 
 ## Live Testing Ground
-A link to a working web page of this repository where you can test this calculator can be found here: https://makmn1.github.io/JavaScript_Calculator/
+A link to a working web page of this repository where you can test this calculator can be found here: https://javascript-calculator-b7632.web.app/
 
 ## CHANGELOG
 **[Version 1.0] 2021, November 5th** 
